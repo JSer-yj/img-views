@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="imgViews.css">
+</head>
+<body>
+    <div ng-app="mydemo" ng-controller="myctrl">
+        <div>
+            <p>轮播图1：默认大小</p>
+            <img-views camera-list="cameraList"></img-views>
+        </div>
+        <div>
+            <p>轮播图2：自定义大小</p>
+            <img-views needless-size="true" width="180" height="130" camera-list="cameraList"></img-views>
+        </div>
+        <div>
+            <p>轮播图3：错误的自定义大小</p>
+            <img-views width="180" height="130" camera-list="cameraList"></img-views>
+        </div>
+        <div>
+            <p>轮播图4：自定义背景颜色</p>
+            <img-views background="'green'" camera-list="cameraList"></img-views>
+            <img-views background="'rgba(255,255,255,1)'" camera-list="cameraList"></img-views>
+        </div>
+        <div>
+            <p>轮播图5：单张图片</p>
+            <img-views needless-size="true" width="200" height="150" camera-list="[{url:'images/test/3.jpg',single:true}]"></img-views>
+        </div>
+        <div>
+            <p>轮播图6：非单张图片</p>
+            <img-views needless-size="true" width="200" height="150" camera-list="[{url:'images/test/2.jpg',title:'萌宠猫猫'}]"></img-views>
+        </div>
+    </div>
+
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="imgViews.js"></script>
+    <script type="text/javascript">
+        var app=angular.module('mydemo',['img.map']);
+        app.controller('myctrl',function ($scope) {
+            $scope.cameraList=[
+                {url:'images/test/10.jpg',title:'萌宠猪猪'},
+                {url:'images/test/2.jpg',title:'萌宠猫猫'},
+                {url:'images/test/3.jpg',title:'萌宠兔兔'},
+                {url:'images/test/4.jpg',title:'萌宠狗狗'},
+                {url:'images/test/5.jpg',title:'萌宠鼠鼠'}
+            ];
+        });
+    </script>
+</body>
+</html>

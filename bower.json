@@ -1,0 +1,23 @@
+{
+  "name": "angular1-imgViews",
+  "description": "",
+  "authors": [
+    "yangjie"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "imgViews"
+  ],
+  "main": [
+    "./dist/imgViews.min.js",
+    "./dist/imgViews.min.css"
+  ],
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.6.*",
+    "jquery": "^2.1.4"
+  }
+}
