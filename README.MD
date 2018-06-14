@@ -12,23 +12,28 @@
   background:'='      //选填(string, 默认rgba(0,0,0,0.1)，eg:'black'/'#000'/'rgb(0,0,0)'/'rgba(0,0,0,0)')   
 ```   
 
-> package.json   
+> package.json/bower.json   
 
 ```json
 {
   "dependencies":{
-    "img-views": "JSer-yj/img-views.git"
+    "img-views": "JSer-yj/img-views"
   }
 }
 ```    
 
-> 执行 npm install       
+> 执行 npm/bower install       
 
 > html页面：   
 
 ```html
 <img-views needless-size="true" width="180" height="130" camera-list="cameraList"></img-views>
 ```
+
+> 依赖注入   
+```javascript
+angular.module('mydemo',['img.map']);  
+```   
 
 > angular controller：   
 
