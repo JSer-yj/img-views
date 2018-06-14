@@ -11,7 +11,7 @@
     "imgViews"
   ],
   "main": [
-    "./dist/imgViews.min.js",
+    "./dist/imgViews.js",
     "./dist/imgViews.min.css"
   ],
   "homepage": "",

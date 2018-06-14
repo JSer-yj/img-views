@@ -30,7 +30,7 @@ gulp.task('style-prod', function() {
 });
 
 gulp.task('clean', function() {
-  return del('dist');
+  return del(['dist/*']);
 });
 
 gulp.task('watch', function() {
@@ -40,4 +40,4 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['style-dev','script-dev','watch']);
 
-gulp.task('prod', ['style-prod','script-prod']);
+gulp.task('prod', ['clean','style-dev','script-dev','style-prod','script-prod']);
